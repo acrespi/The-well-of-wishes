@@ -1,23 +1,23 @@
 <% if !wish.name.blank? %>
   <% if !wish.anonymous.blank? && wish.anonymous == true %>
-    <p class="hig"> Anonymous wished on <%= wish.created_at.to_s(:long)
+    <p class="one"> Anonymous wished on <%= wish.created_at.to_s(:long)
  %>: </p>
   <% else %>
-    <p class="hig"> <%= wish.name %>  wished on <%= wish.created_at.to_s(:long)
+    <p class="one"> <%= wish.name %>  wished on <%= wish.created_at.to_s(:long)
  %>: </p>
   <% end %>
 <% else %>
-    <p class="hig"> Anonymous wished on <%= wish.created_at.to_s(:long) %>: </p>
+    <p class="one"> Anonymous wished on <%= wish.created_at.to_s(:long) %>: </p>
 <% end %>
 
 <% if !wish.secret.blank? %>
   <% if !wish.secret.blank? && wish.secret == true %>
-    <p class="one"> Secret wish... just the well knows this wish. </p>
+    <p class="hig"> Secret wish... just the well knows this wish. </p>
   <% else %>
-    <p class="one"><%= wish.your_wish %> </p>
+    <p class="hig"><%= wish.your_wish %> </p>
   <% end %>
 <% else %>
-    <p class="one"><%= wish.your_wish %> </p>
+    <p class="hig"><%= wish.your_wish %> </p>
 <% end %>
 
 <p class="more1"> </p>
