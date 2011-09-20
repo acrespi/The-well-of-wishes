@@ -1,0 +1,45 @@
+<div id="headerPan">
+<ul>
+<li>THE WELL OF WISHES</li>
+</ul>
+
+</div>
+<div id="mainBody">
+
+<div id="rightPan">
+
+    <p> A stranger is being shown around a village that he has just become part of. He is shown a well and his guide says "On any day except Saturday, you can shout any <span>wish</span> down that well and <span>it can come true.</span>"
+
+The man seems pretty impressed, and so he shouts down: Why not on Saturday? and the voice from in the well shouts back: Because on Saturday, it's your day in the well. </p>
+
+<p class="more">
+<%= link_to "MAKE A WISH", {:controller => :wishes, :action => :new }, :class => "fancy"%>
+</p>
+<h3>Wish list</h3>
+
+<%= render :partial => "wishes/wish", :collection => @wishes %>
+
+<p class="more">
+<%= link_to "MAKE A WISH", {:controller => :wishes, :action => :new }, :class => "fancy"%>
+</div>
+
+<br class="blank" />
+</div>
+
+
+<div id="footerMain">
+<div id="footer">
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    $(".fancy").fancybox();
+
+
+});
+
+</script>

@@ -1,0 +1,21 @@
+<% if !wish.name.blank? %>
+  <% if !wish.anonymous.blank? && wish.anonymous == true %>
+    <p class="hig"> Anonymous wished on <%= wish.created_at %>: </p>
+  <% else %>
+    <p class="hig"> <%= wish.name %>  wished on <%= wish.created_at %>: </p>
+  <% end %>
+<% else %>
+    <p class="hig"> Anonymous wished on <%= wish.created_at %>: </p>
+<% end %>
+
+<% if !wish.secret.blank? %>
+  <% if !wish.secret.blank? && wish.secret == true %>
+    <p class="one"> Secret wish... just the well knows this wish. </p>
+  <% else %>
+    <p class="one"><%= wish.your_wish %> </p>
+  <% end %>
+<% else %>
+    <p class="one"><%= wish.your_wish %> </p>
+<% end %>
+
+<p class="more1"> </p>

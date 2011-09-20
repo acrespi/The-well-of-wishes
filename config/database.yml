@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: well_development
+  username: postgres
+  password: postgrespass
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: well_production
+  username: postgres
+  password: postgrespass
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: well_test
+  username: postgres
+  password: postgrespass
