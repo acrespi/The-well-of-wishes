@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def show
 
-  @wishes = Wish.find :all
+    @wishes = Wish.find(:all, :order => "created_at DESC")
   end
 
 end
